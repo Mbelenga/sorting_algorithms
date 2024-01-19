@@ -20,3 +20,22 @@ void bubble_sort(int *array, size_t size);
 	{
 		/* Swapped flag */
 		swapped = 0;
+
+		for (j = 0; j < size - index - 1; j++)
+		{
+			if (array[j] > array[j + 1])
+			{
+			/* The elements are swapped */
+			temp = array[j];
+			array[j] = array[j + 1];
+			array[j + 1] = temp;
+			swapped = 1;
+			print_array(array, size);
+			}
+		}
+		if (swapped == 0)
+		{
+			return;
+		}
+	}
+}
